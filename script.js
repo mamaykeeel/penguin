@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Handle loader
         setTimeout(() => {
             loader.classList.add("fade-out");
-        }, 3000);
+        }, 2000);
         
         setTimeout(() => {
             loader.style.display = "none";
