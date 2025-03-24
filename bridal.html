@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Car Services - Penguin Sales & Services Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00264d',
+                        secondary: '#f8c546',
+                        'primary-light': '#003a73',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" type="image/x-icon" href="img/qpss.png">
+    <script src="script.js"></script>
+</head>
+<body class="bg-gray-50 font-['Outfit']">
+    <!-- Navigation -->
+    <nav class="bg-primary shadow-xl fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center py-3">
+                <div class="flex items-center justify-between w-full md:w-auto">
+                    <div class="flex items-center">
+                        <a href="index.html" class="flex items-center">
+                            <img src="img/qpss.png" alt="Penguin Logo" class="h-12 w-auto">
+                            <div class="ml-4">
+                                <h1 class="text-xl font-bold text-white">Penguin Asia</h1>
+                                <p class="text-sm text-secondary italic">We Make It Happen.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <button type="button" id="mobile-menu-button" class="md:hidden text-white hover:text-secondary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div id="nav-content" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0 w-full md:w-auto">
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="text-white group-hover:text-secondary px-3 py-2 text-sm font-medium inline-flex items-center transition-colors duration-300">
+                            <span>Services</span>
+                            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
+                            <div class="relative bg-primary rounded-lg shadow-lg">
+                                <div class="p-2 space-y-1">
+                                    <a href="bridal.html" class="block px-4 py-2 text-sm text-white bg-primary-light rounded-md transition-colors duration-300">Bridal Car Services</a>
+                                    <a href="towing.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light rounded-md transition-colors duration-300">Towing Services 24/7</a>
+                                    <a href="trucking.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light rounded-md transition-colors duration-300">Trucking Services</a>
+                                    <a href="heavy.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light rounded-md transition-colors duration-300">Heavy Equipment Rental</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Construction & Maintenance Dropdown -->
+                    <div class="relative group">
+                        <button class="text-white group-hover:text-secondary px-3 py-2 text-sm font-medium inline-flex items-center transition-colors duration-300">
+                            <span>Construction & Maintenance</span>
+                            <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
+                            <div class="relative bg-primary rounded-lg shadow-lg">
+                                <div class="p-2 space-y-1">
+                                    <a href="general.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light rounded-md transition-colors duration-300">General Construction</a>
+                                    <a href="maintenance.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light rounded-md transition-colors duration-300">Maintenance Services</a>
+                                    <a href="furniture.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light rounded-md transition-colors duration-300">Furniture Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Auto Parts Link -->
+                    <a href="parts.html" class="text-white hover:text-secondary px-3 py-2 text-sm font-medium transition-colors duration-300">Auto Parts</a>
+
+                    <!-- Search Bar - Redesigned for professional look -->
+                    <div class="relative mx-2">
+                        <form action="#" method="get" class="flex items-center">
+                            <div class="relative w-full">
+                                <input type="search" id="desktop-search" class="w-48 md:w-56 lg:w-64 pl-10 pr-4 py-2 text-sm bg-opacity-10 bg-white text-white rounded-full border border-white/20 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary placeholder-gray-300" placeholder="Search...">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Button -->
+                    <a href="#contact" class="text-primary bg-secondary hover:bg-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-in-out">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <!-- Mobile Search Bar - Redesigned -->
+                <div class="px-4 pt-4 pb-2">
+                    <form action="#" method="get">
+                        <div class="relative">
+                            <input type="search" id="mobile-search" class="w-full pl-10 pr-4 py-2.5 text-sm bg-opacity-10 bg-white text-white rounded-full border border-white/20 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary placeholder-gray-300" placeholder="Search...">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="space-y-1">
+                        <p class="px-4 pt-4 text-sm font-semibold text-secondary">Services</p>
+                        <a href="bridal.html" class="block px-4 py-2 text-sm text-white bg-primary-light transition-colors duration-300">Bridal Car Services</a>
+                        <a href="towing.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light transition-colors duration-300">Towing Services 24/7</a>
+                        <a href="trucking.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light transition-colors duration-300">Trucking Services</a>
+                        <a href="heavy.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light transition-colors duration-300">Heavy Equipment Rental</a>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="px-4 pt-4 text-sm font-semibold text-secondary">Construction & Maintenance</p>
+                        <a href="general.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light transition-colors duration-300">General Construction</a>
+                        <a href="maintenance.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light transition-colors duration-300">Maintenance Services</a>
+                        <a href="furniture.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light transition-colors duration-300">Furniture Services</a>
+                    </div>
+                    <div class="space-y-1">
+                        <a href="parts.html" class="block px-4 py-2 text-sm text-white hover:bg-primary-light transition-colors duration-300">Auto Parts</a>
+                        <a href="#contact" class="block px-4 py-2 text-sm text-primary bg-secondary hover:bg-white transition-colors duration-300">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Enhanced with more elegance -->
+    <div class="bg-gradient-to-r from-primary to-primary-light pt-32 pb-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-secondary text-sm font-medium mb-6">Premium Service</span>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">Bridal Car Services</h1>
+            <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">Make your special day even more memorable with our luxury bridal car service</p>
+            <div class="mt-8">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 rounded-full bg-secondary text-primary font-medium hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Book Your Bridal Car
+                    <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content - Fixed margin -->
+    <div class="pb-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-0">
+            <!-- Photo Gallery with enhanced cards -->
+            <div class="bg-white rounded-xl shadow-xl p-6 md:p-10 mb-12 border border-gray-100">
+                <div class="flex flex-col items-center mb-10">
+                    <span class="text-secondary uppercase tracking-wider text-sm font-semibold mb-2">Luxury Experience</span>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-3 text-center">Our Elegant Fleet</h2>
+                    <div class="w-20 h-1 bg-secondary rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    <!-- Car Card - Enhanced styling -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
+                        <div class="w-full h-60 md:h-72 overflow-hidden">
+                            <img src="https://i0.wp.com/penguin.asia/wp-content/uploads/2019/12/7E66AC38-B37E-4C64-8DFD-5665A76B77A5.jpeg?ssl=1" 
+                                 alt="BMW E39 Front View" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-lg md:text-xl font-semibold mb-1">BMW E39</h3>
+                                <p class="text-gray-200 text-sm mb-4">Front View</p>
+                                <span class="inline-block px-3 py-1 bg-secondary/80 text-primary text-xs rounded-full">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car 2 - BMW E39 Side View -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
+                        <div class="w-full h-60 md:h-72 overflow-hidden">
+                            <img src="https://i1.wp.com/penguin.asia/wp-content/uploads/2019/12/0ED0C70A-B20E-4D74-AEF6-290806174D3B.jpeg?ssl=1" 
+                                 alt="BMW E39 Side View" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-lg md:text-xl font-semibold mb-1">BMW E39</h3>
+                                <p class="text-gray-200 text-sm mb-4">Side Profile</p>
+                                <span class="inline-block px-3 py-1 bg-secondary/80 text-primary text-xs rounded-full">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car 3 - BMW E39 Interior -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
+                        <div class="w-full h-60 md:h-72 overflow-hidden">
+                            <img src="https://i2.wp.com/penguin.asia/wp-content/uploads/2019/12/78805262-EC67-4EF1-B1D3-E2A4BC5D3F7D.jpeg?ssl=1" 
+                                 alt="BMW E39 Interior" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-lg md:text-xl font-semibold mb-1">BMW E39</h3>
+                                <p class="text-gray-200 text-sm mb-4">Luxurious Interior</p>
+                                <span class="inline-block px-3 py-1 bg-secondary/80 text-primary text-xs rounded-full">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car 4 - BMW E39 with Decoration -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
+                        <div class="w-full h-60 md:h-72 overflow-hidden">
+                            <img src="https://i1.wp.com/penguin.asia/wp-content/uploads/2021/08/5E152B9B-6C7D-461D-9536-BC3C2EB177EE.jpeg?ssl=1" 
+                                 alt="BMW E39 with Wedding Decoration" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-lg md:text-xl font-semibold mb-1">BMW E39</h3>
+                                <p class="text-gray-200 text-sm mb-4">With Wedding Decoration</p>
+                                <span class="inline-block px-3 py-1 bg-secondary/80 text-primary text-xs rounded-full">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Car 5 - BMW E39 Rear View -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
+                        <div class="w-full h-60 md:h-72 overflow-hidden">
+                            <img src="https://i0.wp.com/penguin.asia/wp-content/uploads/2021/08/964F1776-D2F3-4C5D-AC61-83473B8B296C.jpeg?ssl=1" 
+                                 alt="BMW E39 Rear View" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <h3 class="text-white text-lg md:text-xl font-semibold mb-1">BMW E39</h3>
+                                <p class="text-gray-200 text-sm mb-4">Rear View</p>
+                                <span class="inline-block px-3 py-1 bg-secondary/80 text-primary text-xs rounded-full">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View More Card -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg bg-gradient-to-br from-primary to-primary-light">
+                        <div class="p-6 md:p-8 text-center h-full flex flex-col justify-center">
+                            <h3 class="text-xl md:text-2xl font-semibold text-white mb-4 md:mb-6">View More Photos</h3>
+                            <p class="text-gray-300 mb-6 md:mb-8 text-base">Visit our Facebook page for our complete gallery and latest updates</p>
+                            <a href="https://www.facebook.com/tagaytaybridalcar/" target="_blank" 
+                               class="inline-flex items-center justify-center px-5 py-3 bg-secondary text-primary rounded-lg hover:bg-white transition-colors duration-300 font-medium shadow-md">
+                                <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Visit Facebook Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Information Section - Enhanced -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Package Details - Enhanced styling -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <div class="bg-gradient-to-r from-primary to-primary-light py-4 px-6">
+                        <h2 class="text-xl md:text-2xl font-semibold text-white">Premium Package Includes</h2>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <ul class="space-y-5 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-secondary/20 p-1.5 rounded-full mr-4">
+                                    <svg class="h-5 w-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="pt-1">Elegant bouquet of fresh flowers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-secondary/20 p-1.5 rounded-full mr-4">
+                                    <svg class="h-5 w-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="pt-1">VIP blinkers for a grand entrance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-secondary/20 p-1.5 rounded-full mr-4">
+                                    <svg class="h-5 w-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="pt-1">Professional driver in semi formal attire</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-secondary/20 p-1.5 rounded-full mr-4">
+                                    <svg class="h-5 w-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="pt-1">Transportation from hotel to ceremony venue</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-secondary/20 p-1.5 rounded-full mr-4">
+                                    <svg class="h-5 w-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="pt-1">Transportation from ceremony to reception venue</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pricing Details -->
+                <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 h-full border-t-4 border-secondary">
+                    <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-6">Service Terms & Pricing</h2>
+                    <div class="space-y-4 text-gray-700">
+                        <p class="flex items-start">
+                            <svg class="h-6 w-6 text-secondary mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>First 3 hours rate included in base package</span>
+                        </p>
+                        <p class="flex items-start">
+                            <svg class="h-6 w-6 text-secondary mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Additional fee applicable for service exceeding 3 hours</span>
+                        </p>
+                        
+                        <div class="mt-8 p-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg">
+                            <p class="text-2xl font-bold text-primary">Price starts at ₱4,000.00</p>
+                            <p class="text-lg text-primary-light mt-1">For our BMW E39 Luxury Sedan</p>
+                            <p class="text-sm text-gray-500 mt-4 italic">* Price is subject to change without prior notice</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action / Contact Section - Enhanced -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <span class="inline-block px-3 py-1 bg-secondary/20 text-secondary text-sm font-medium rounded-full mb-4">Reserve Now</span>
+                        <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-6">Book Your Dream Bridal Car</h2>
+                        <p class="text-gray-700 mb-8 leading-relaxed">Make your wedding day truly special with our premium bridal car service. Contact us today to check availability for your event date.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">Contact Number</h3>
+                                <p class="text-2xl font-bold text-secondary flex items-center">
+                                    <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                    (0923) 086 8342
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-900 mb-3">Follow Us</h3>
+                                <a href="https://www.facebook.com/tagaytaybridalcar/" target="_blank" 
+                                   class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-light transition-all duration-300 shadow-md hover:shadow-lg">
+                                    <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                    Facebook Page
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 hidden md:block relative">
+                        <img src="https://i1.wp.com/penguin.asia/wp-content/uploads/2021/08/5E152B9B-6C7D-461D-9536-BC3C2EB177EE.jpeg?ssl=1" 
+                             alt="Decorated Bridal Car" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-l from-transparent to-primary/20"></div>
+                        <div class="absolute bottom-8 right-8 bg-white/95 p-5 rounded-lg shadow-lg max-w-xs">
+                            <p class="text-primary font-semibold">Book early to secure your preferred date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="img/qpss.png" alt="Penguin Logo" class="h-10 w-auto">
+                    <div class="ml-4">
+                        <h2 class="text-lg font-semibold text-white">Penguin Sales & Services</h2>
+                        <p class="text-sm text-gray-400">We Make It Happen.</p>
+                    </div>
+                </div>
+                <p class="text-center text-gray-400 text-sm">
+                    © 2024 Penguin Sales & Services Company. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
