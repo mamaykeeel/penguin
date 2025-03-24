@@ -55,3 +55,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    window.addEventListener("load", function() {
+        const loader = document.querySelector(".loader-wrapper");
+        
+        // Handle loader
+        setTimeout(() => {
+            loader.classList.add("fade-out");
+        }, 3000);
+        
+        setTimeout(() => {
+            loader.style.display = "none";
+            
+            // Trigger fade-in animations
+            fadeElements.forEach(element => {
+                element.classList.add('active');
+            });
+            
+            // Initialize scroll animations
+            initScrollAnimations();
+        }, 3500);
+    });
+    
+    // Handle scroll animations
+    function initScrollAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+});
